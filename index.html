@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>إرسال رسالة</title>
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+                direction: rtl;
+                text-align: right;
+                background-color: #f8f8f8;
+                margin: 0;
+                padding: 0;
+            }
+            form {
+                width: 90%;
+                margin: 50px auto;
+                padding: 20px;
+            }
+            fieldset {
+                border: 2px solid #888;
+                padding: 20px;
+            }
+            legend {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            label {
+                font-size: 16px;
+                font-weight: bold;
+                display: block;
+                margin: 10px 0 5px;
+            }
+            input, textarea {
+                width: 50%;
+                padding: 10px;
+                border: 2px solid #888;
+                border-radius: 9px;
+                font-size: 16px;
+            }
+            input[type="radio"] {
+                transform: scale(1.8);
+                margin-right: 5px;
+            }
+            .gender {
+                display: inline-flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                padding-right: 5px;
+            }
+            button {
+                display: block;
+                width: 80px;
+                padding: 8px;
+                margin-top: 5px;
+                background-color: #008bfd;
+                color: white;
+                border: none;
+                border-radius: 18px;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>إرسال لنا رسالة (عمل الطالب وائل عبدالله العوفي)</legend>
+
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" placeholder="اكتب اسمك هنا" required>
+
+                <label for="family-name">اسم العائلة:</label>
+                <input type="text" id="family-name" name="family-name" placeholder="اكتب اسم العائلة هنا" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder="اكتب عنوان بريدك الإلكتروني" required>
+
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" rows="2" placeholder="اكتب رسالتك هنا" required></textarea>
+
+                <label>الجنس:</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">ذكر</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">أنثى</label>
+                </div>
+
+                <button type="submit">إرسال</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
